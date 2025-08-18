@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: auto 0;
+}
+
+#hero-content {
+  padding: 3rem 2.5rem ;
+  background-image: url(/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100vw;
+}
+#hero-text{
+    width: 50%;
+    color: #ffff;
+}
+
+#container{
+  padding: 1rem 2.5rem;
+}
+
+ul{
+  list-style: none;
+}
+.list-group-item:hover{
+  background-color: rgba(187, 187, 187, 0.918);
+  transition-duration: 0.4s;
+}
