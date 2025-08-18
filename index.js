@@ -13,7 +13,6 @@ const host = "0.0.0.0";
 //configurando o servidor para prover arquivos estáticos
 app.use(express.static("/publico"));
 
-
 app.listen(porta, host, () => {
   console.log(`Servidor em execução em http://${host}:${porta}`); // template literals
 });
