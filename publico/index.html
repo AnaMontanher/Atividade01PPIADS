@@ -14,13 +14,17 @@
     <title>Página Principal</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid d-flex justify-content-between">
-        <div id="divTopo" >
+        <div id="divTopo">
           <a class="navbar-brand d-flex" href="#">
-            <img src="/assets/online-learning.png" style="width: 45px" alt="" />
-           <span class="ms-2">AquiCursos</span> </a
-          >
+            <img
+              src="/assets/online-learning.png"
+              style="width: 45px"
+              alt="brand do site Aquicurso"
+            />
+            <span class="ms-2">AquiCursos</span>
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -39,12 +43,12 @@
         >
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Planos</a>
+              <a class="nav-link" href="#">Nosso Blog</a>
             </li>
-            <li class="nav-item dropdown">
+            <!-- <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -62,9 +66,16 @@
                   <a class="dropdown-item" href="#">Something else here</a>
                 </li>
               </ul>
-            </li>
+            </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="#">Cadastro</a>
+              <a class="nav-link" href="/publico/login.html"
+                ><img
+                  src="/assets/login-avatar.png"
+                  class="me-2"
+                  style="width: 20px"
+                  alt="login-avatar"
+                /><span>Login</span></a
+              >
             </li>
           </ul>
         </div>
@@ -81,17 +92,8 @@
       </div>
     </div>
     <div id="container" class="row">
-      <form class="d-flex mb-2 mt-2" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
       <div id="sidebar" class="col-sm-3">
-        <h2>Categorias</h2>
+        <h2 class="title mb-3">Categorias</h2>
         <ul class="list-group">
           <li><a class="list-group-item" href="">Administração</a></li>
           <li><a class="list-group-item" href="">Artes</a></li>
@@ -111,6 +113,15 @@
         </ul>
       </div>
       <div id="main" class="col-sm-9">
+        <form class="d-flex mb-2 mt-2" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
         <div id="cursos" class="container">
           <div class="row d-flex gap-5 mb-4">
             <div class="card col" style="width: 18rem">
@@ -121,7 +132,9 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card’s content.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="/publico/login.html" class="btn btn-primary"
+                  >Go somewhere</a
+                >
               </div>
             </div>
 
@@ -133,7 +146,9 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card’s content.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="/publico/login.html" class="btn btn-primary"
+                  >Go somewhere</a
+                >
               </div>
             </div>
             <div class="card col" style="width: 18rem">
@@ -144,7 +159,9 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card’s content.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="/publico/login.html" class="btn btn-primary"
+                  >Go somewhere</a
+                >
               </div>
             </div>
           </div>
@@ -157,7 +174,9 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card’s content.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="/publico/login.html" class="btn btn-primary"
+                  >Go somewhere</a
+                >
               </div>
             </div>
 
@@ -169,7 +188,9 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card’s content.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="/publico/login.html" class="btn btn-primary"
+                  >Go somewhere</a
+                >
               </div>
             </div>
             <div class="card col" style="width: 18rem">
@@ -180,7 +201,9 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card’s content.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="/publico/login.html" class="btn btn-primary"
+                  >Go somewhere</a
+                >
               </div>
             </div>
           </div>
