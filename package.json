@@ -23,6 +23,7 @@
   "homepage": "https://github.com/AnaMontanher/Aula01PPIADS#readme",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "express-session": "^1.18.2"
   }
 }
