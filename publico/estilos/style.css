@@ -70,6 +70,14 @@ ul {
   padding: 1rem;
 }
 
+.needs-validation :first-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.needs-validation :nth-child(2) {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
 input {
   line-height: 1.75rem;
 }

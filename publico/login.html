@@ -9,7 +9,7 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../estilos/style.css" />
+    <link rel="stylesheet" href="/estilos/style.css" />
 
     <title>Página de Login</title>
   </head>
@@ -71,26 +71,25 @@
 
         <form method="post" action="/login" class="needs-validation">
           <input
-            class="form-control"
+            class="form-control login"
             placeholder="E-mail"
             type="email"
             id="usuario"
             name="usuario"
           />
           <input
-            class="form-control mb-2"
+            class="form-control mb-2 login"
             placeholder="Senha"
             type="password"
             name="senha"
             id="senha"
           />
-          <button
+          <input
             class="btn btn-primary w-100 py-2"
-            id="button-login"
+            id="login"
             type="submit"
-          >
-            Entrar
-          </button>
+            value="Entrar"
+          />
         </form>
       </div>
     </div>
@@ -100,4 +99,5 @@
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"
   ></script>
+  <script src="../script.js" defer></script>
 </html>

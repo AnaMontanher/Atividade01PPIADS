@@ -12,7 +12,7 @@ app.use(
   session({
     secret: "meuS3gredo",
     resave: true,
-    saveUnitialized: true,
+    saveUninitialized: true,
     cookie: {
       maxAge: 1000 * 60 * 15, //15 minutos ocioso até encerrar a sessão
     },
