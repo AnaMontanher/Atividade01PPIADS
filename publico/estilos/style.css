@@ -14,37 +14,39 @@ h2 {
   background-color: #81b29a !important;
   color: #f2cc8f !important;
 }
-
-#hero-content {
-  padding: 3rem 2.5rem;
-  background-image: url(../assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg);
-  background-position: center center;
-  background-size: cover;
-}
-
-.nav-link {
-  color: #313349;
-  text-decoration: underline 0.15em #f2cc8f00;
-  transition: text-decoration-color 500ms;
-}
-.nav-link:hover {
-  color: #f2cc8f;
-  text-decoration-color: #f2cc8f;
-}
 #hero-text {
+  background-color: #6c757d91;
+  border-radius: 0.357rem;
+  width: 80%;
+  padding: 1.5rem 2rem;
   width: 50%;
   color: #f4f1de;
 }
-
+#hero-content,
+#hero-menu {
+  padding: 3rem 2.5rem;
+  background-position: center center;
+  background-size: cover;
+}
+#hero-content {
+  background-image: url(../assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg);
+}
+#hero-menu {
+  background-color: #f4f1de;
+  color: #313349;
+}
 #container {
   height: 100%;
   padding: 1rem 2rem;
   margin: 0;
   background-color: #f4f1de;
 }
+#main-menu {
+  background-color: #81b29a;
+}
 
 #main-login {
-  padding-bottom: 72px;
+  padding: auto;
 }
 
 ul {
@@ -69,15 +71,11 @@ ul {
   max-width: 500px;
   padding: 1rem;
 }
+.card {
+  min-width: 250px;
+  min-height: 353px;
+}
 
-.needs-validation :first-child {
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-.needs-validation :nth-child(2) {
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-}
 input {
   line-height: 1.75rem;
 }
@@ -96,6 +94,29 @@ input {
   color: #6c757d;
 }
 .price {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bolder;
+}
+
+@media (max-width: 576px) {
+  #hero-text {
+    width: 100%;
+  }
+  #sidebar,
+  #search {
+    display: none;
+  }
+  .row {
+    gap: 1.5rem !important;
+  }
+}
+
+.nav-link {
+  color: #313349;
+  text-decoration: underline 0.15em #f2cc8f00;
+  transition: text-decoration-color 500ms;
+}
+.nav-link:hover {
+  color: #f2cc8f;
+  text-decoration-color: #f2cc8f;
 }

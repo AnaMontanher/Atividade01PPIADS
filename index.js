@@ -29,13 +29,15 @@ app.use(express.urlencoded({ extended: true }));
 app.post("/login", (requisicao, resposta) => {
   const usuario = requisicao.body.usuario;
   const senha = requisicao.body.senha;
+
   if (usuario == "admin@admin" && senha == "admin") {
     requisicao.session.autenticado = true;
     resposta.redirect("/menu.html");
   } else {
-    resposta.send(
-      "<span>Usuário e senha inválidos!</span> <a href='/login.html'>Tente Novamente.</a>"
-    );
+    resposta.redirect("/invalid.html");
+    // send(
+    //   "<span>Usuário e senha inválidos!</span> <a href='/login.html'>Tente Novamente.</a>"
+    // );
   }
 });
 app.get("/logout", (requisicao, resposta) => {

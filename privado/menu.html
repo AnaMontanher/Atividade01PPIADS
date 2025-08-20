@@ -41,19 +41,23 @@
           id="navbarSupportedContent"
         >
           <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item me-2">
               <a class="nav-link" href="../index.html">Meus Cursos</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item me-2">
               <a class="nav-link" href="#">Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../publico/login.html"
+              <a
+                class="nav-link me-4"
+                id="loginLink"
+                href="../publico/login.html"
                 ><img
-                  src="../assets/login-avatar.png"
+                  src="../assets/logout"
                   class="me-2"
                   style="width: 20px"
                   alt="login-avatar"
+                  id="iconLogout"
                 /><span>Sair</span></a
               >
             </li>
@@ -61,11 +65,17 @@
         </div>
       </div>
     </nav>
-    <h1>Menu</h1>
+    <div id="hero-menu">
+      <h1>Olá, Admin!</h1>
+    </div>
+    <div id="main-menu">
+      
+    </div>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"
   ></script>
+  <script src="./iconEffect.js" defer></script>
 </html>
