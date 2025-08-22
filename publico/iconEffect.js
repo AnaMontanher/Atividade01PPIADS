@@ -12,6 +12,7 @@ loginLink.addEventListener("mouseleave", () => {
 });
 
 loginLink.addEventListener("mouseenter", () => {
+  
   logout.src = "../assets/logout2.png";
   logout.style.transition = "all 500ms ease-in-out;";
 });

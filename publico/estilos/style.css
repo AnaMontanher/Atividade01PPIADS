@@ -1,26 +1,60 @@
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
   padding: 0;
-  margin: auto 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
 }
 
+h1,
 h2 {
-  color: #313349;
+  --main-color: #001845;
 }
-.navbar {
-  --bs-navbar-color: #313349 !important;
+
+.brand {
+  color: #d7f6f7;
+  text-shadow: #0353a4;
 }
+/*NAVBARS*/
+
 #navbar {
-  background-color: #81b29a !important;
+  background-color: #001845 !important;
+  --bs-navbar-color: #d7f6f7 !important;
+  box-shadow: 4px 3px 3px 2px #0a0908;
   color: #f2cc8f !important;
+  max-width: 100%;
 }
+.nav-link {
+  color: #d7f6f7;
+  text-decoration: underline 0.15em #f2cc8f00;
+  transition: text-decoration-color 500ms;
+}
+.nav-link:hover {
+  color: #f2cc8f;
+  text-decoration-color: #f2cc8f;
+}
+
+/*HOME PAGE - HERO*/
+.title {
+  color: var(--main-color);
+}
+
+.text-paragraph {
+  font-size: 1.2rem;
+}
+
 #hero-text {
-  background-color: #6c757d91;
+  background-color: #9ca9b3b8;
   border-radius: 0.357rem;
   width: 80%;
   padding: 1.5rem 2rem;
   width: 50%;
-  color: #f4f1de;
+  color: #f3f3f6;
 }
 #hero-content,
 #hero-menu {
@@ -31,55 +65,17 @@ h2 {
 #hero-content {
   background-image: url(../assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg);
 }
-#hero-menu {
-  background-color: #f4f1de;
-  color: #313349;
-}
 #container {
-  height: 100%;
+  flex-grow: 1;
   padding: 1rem 2rem;
   margin: 0;
-  background-color: #f4f1de;
+  background-color: #f8f7ff;
 }
-#main-menu {
-  background-color: #81b29a;
-}
-
-#main-login {
-  padding: auto;
-}
-
-ul {
-  list-style: none;
-}
-.list-group {
-  --bs-list-group-color: #313349 !important;
-}
-.list-group-item:hover {
-  background-color: rgba(187, 187, 187, 0.918);
-  transition-duration: 0.4s;
-}
-.list-group > li:first-child {
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-.list-group > li:last-child {
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-.form-signin {
-  max-width: 500px;
-  padding: 1rem;
-}
+/*HOMEPAGE - CARDS*/
 .card {
   min-width: 250px;
   min-height: 353px;
 }
-
-input {
-  line-height: 1.75rem;
-}
-
 .card-title {
   margin-bottom: 0px;
   text-align: justify;
@@ -98,6 +94,98 @@ input {
   font-weight: bolder;
 }
 
+/*HOMEPAGE - SIDEBAR*/
+ul {
+  list-style: none;
+}
+.list-group {
+  --bs-list-group-color: #0a0908 !important;
+}
+.list-group-item:hover {
+  background-color: rgba(187, 187, 187, 0.918);
+  transition-duration: 0.4s;
+}
+.list-group > li:first-child {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.list-group > li:last-child {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/*MENU - HERO*/
+#main-menu {
+  background-color: #0353a4;
+}
+
+#hero-menu {
+  background-color: #f8f7ff;
+}
+
+#main-login {
+  padding: auto;
+}
+
+/*LOGIN*/
+
+.form-signin {
+  max-width: 500px;
+  padding: 1rem;
+}
+
+input {
+  line-height: 1.75rem;
+}
+
+/*PÁGINAS MAIS DETALHES*/
+#hero-financas {
+  gap: 20px;
+  --bs-gutter-x: 0;
+  padding: 4rem 4rem;
+  background-image: linear-gradient(135deg, #f4f4f4, #94b9ff);
+}
+.btn-inscreva {
+  width: 40%;
+  --bs-btn-color: #0353a4;
+}
+
+.title-curso {
+  color: #33415c;
+}
+
+.image {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 3px 3px 3px 1px black;
+  border-radius: 4px;
+}
+
+#curso-text {
+  margin: 0 auto;
+  text-align: justify;
+  color: #3d405b;
+}
+#info {
+  max-height: 700px;
+  padding: 4rem 4rem;
+}
+#container-card {
+}
+
+.card-info {
+  padding: 2.5rem 1rem;
+  border-radius: 1rem;
+  width: 25%;
+  background-color: #f2cc8f;
+}
+/*VALOR DO CURSO*/
+
+#total {
+  display: none;
+}
+
+/*MEDIAS*/
 @media (max-width: 576px) {
   #hero-text {
     width: 100%;
@@ -109,14 +197,33 @@ input {
   .row {
     gap: 1.5rem !important;
   }
+  #hero-financas {
+    flex-direction: column;
+  }
 }
 
-.nav-link {
-  color: #313349;
-  text-decoration: underline 0.15em #f2cc8f00;
-  transition: text-decoration-color 500ms;
-}
-.nav-link:hover {
-  color: #f2cc8f;
-  text-decoration-color: #f2cc8f;
+@media (min-width: 1200px) {
+  #hero-financas {
+    padding: 0 0 8rem 0;
+    background-color: #004aad;
+    background-position: 0% -50px;
+    background-repeat: no-repeat;
+    background-image: url(../assets/bg-details.png);
+  }
+  #curso-text {
+    text-align: justify;
+    width: 70%;
+    max-width: 400px;
+    margin: 140px 0px 0px 140px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    max-width: 100%;
+  }
+  .image {
+    margin: 5rem 0;
+  }
 }

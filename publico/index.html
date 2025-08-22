@@ -9,22 +9,22 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/estilos/style.css" />
+    <link rel="stylesheet" href="./estilos/style.css" />
 
     <title>Página Principal</title>
   </head>
   <body>
-    <script src="./iconEffect.js" defer></script>
+    <script src="iconEffect.js" defer></script>
     <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid d-flex justify-content-between">
         <div id="divTopo">
-          <a class="navbar-brand d-flex" href="#" id="icon">
+          <a class="navbar-brand d-flex align-items-center" href="#" id="icon">
             <img
-              src="../assets/online-learning.png"
+              src="./assets/online-learning.png"
               style="width: 45px"
               alt="brand do site Aquicurso"
             />
-            <span class="ms-2">AquiCursos</span>
+            <span class="brand ms-2">AquiCursos</span>
           </a>
         </div>
         <button
@@ -52,7 +52,7 @@
             <li class="nav-item">
               <a class="nav-link me-4" id="loginLink" href="./login.html"
                 ><img
-                  src="../assets/login.png"
+                  src="./assets/login.png"
                   class="me-2"
                   style="width: 20px"
                   alt="login-avatar"
@@ -66,12 +66,14 @@
       </div>
     </nav>
     <div class="content" id="hero-content">
-      <div id="hero-image"></div>
       <div class="hero-text" id="hero-text">
-        <h1>Cursos Online com Certificado</h1>
-        <p>
-          Na AquiCursos você encontrará diversos cursos online de todas as áreas
-          para o seu currículo se destacar no mercado de trabalho.
+        <h1 class="title">Cursos Online com Certificado</h1>
+        <p id="text-paragraph">
+          Na AquiCursos, você encontra uma ampla variedade de cursos online com
+          certificado, desenvolvidos para impulsionar sua carreira e enriquecer
+          seu currículo. São centenas de opções em diversas áreas do
+          conhecimento, como Administração, Saúde, Educação, Tecnologia,
+          Marketing, Direito, entre muitas outras.
         </p>
       </div>
     </div>
@@ -111,9 +113,9 @@
           <div class="row d-flex gap-5 mb-4">
             <div class="card col" style="width: 18rem">
               <img
-                src="../assets/financas.jpg"
+                src="./assets/financas.jpg"
                 class="card-img-top"
-                alt="..."
+                alt="Imagem de tela com gráficos econômicos"
               />
               <div class="card-body">
                 <h5 class="card-title d-inline-flex">Finanças Pessoais</h5>
@@ -121,7 +123,7 @@
                 <p class="autor">José Roberto S.</p>
                 <div class="card-btn mt-4 d-flex mt-4 justify-content-between">
                   <p class="price d-inline-flex">R$54,90</p>
-                  <a href="./login.html" class="btn btn-primary"
+                  <a href="./financas.html" class="btn btn-primary"
                     >Mais detalhes</a
                   >
                 </div>
@@ -130,9 +132,9 @@
 
             <div class="card col" style="width: 18rem">
               <img
-                src="../assets/education.jpg"
+                src="./assets/education.jpg"
                 class="card-img-top"
-                alt="..."
+                alt="imagem de carrinhos de brinquedo, ao fundo crianças estão brincando"
               />
               <div class="card-body">
                 <h5 class="card-title d-inline-flex">Alfabetização</h5>
@@ -148,9 +150,9 @@
             </div>
             <div class="card col" style="width: 18rem">
               <img
-                src="../assets/programacao.jpg"
+                src="./assets/programacao.jpg"
                 class="card-img-top"
-                alt="..."
+                alt="imagem de uma tela de computador com códigos de programação"
               />
               <div class="card-body">
                 <h5 class="card-title d-inline-flex">
@@ -170,9 +172,9 @@
           <div class="row d-flex gap-5">
             <div class="card col" style="width: 18rem">
               <img
-                src="../assets/financeiro.jpg"
+                src="./assets/financeiro.jpg"
                 class="card-img-top"
-                alt="..."
+                alt="imagem de um notebook na mesa, em sua tela há diversos gráficosz "
               />
               <div class="card-body">
                 <h5 class="card-title d-inline-flex">Power BI do Zero</h5>
@@ -188,7 +190,11 @@
             </div>
 
             <div class="card col" style="width: 18rem">
-              <img src="../assets/tech.jpg" class="card-img-top" alt="..." />
+              <img
+                src="./assets/tech.jpg"
+                class="card-img-top"
+                alt="imagem de um notebook, sua tela mostra códigos de programacao"
+              />
               <div class="card-body">
                 <h5 class="card-title d-inline-flex">Lógica de Programação</h5>
                 <span class="details">- 15 horas</span>
@@ -202,7 +208,11 @@
               </div>
             </div>
             <div class="card col" style="width: 18rem">
-              <img src="../assets/python.jpg" class="card-img-top" alt="..." />
+              <img
+                src="./assets/python.jpg"
+                class="card-img-top"
+                alt="Imagem da logo da linguagem de programação Pyhton"
+              />
               <div class="card-body">
                 <h5 class="card-title">Curso Básico de Python</h5>
                 <span class="details">- 15 horas</span>

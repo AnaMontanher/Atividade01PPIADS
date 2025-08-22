@@ -9,212 +9,122 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/estilos/style.css" />
+    <link rel="stylesheet" href="./estilos/style.css" />
 
     <title>Finanças Pessoais</title>
   </head>
   <body>
-    <script src="./iconEffect.js" defer></script>
-    <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid d-flex justify-content-between">
-        <div id="divTopo">
-          <a class="navbar-brand d-flex" href="#" id="icon">
-            <img
-              src="../assets/online-learning.png"
-              style="width: 45px"
-              alt="brand do site Aquicurso"
-            />
-            <span class="ms-2">AquiCursos</span>
-          </a>
+    <script src="iconEffect.js" defer></script>
+    <script src="funcoes.js"></script>
+    <script src="valor.js" defer></script>
+    <div id="financas">
+      <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid d-flex justify-content-between">
+          <div id="divTopo">
+            <a
+              class="navbar-brand d-flex align-items-center"
+              href="./index.html"
+              id="icon"
+            >
+              <img
+                src="../assets/online-learning.png"
+                style="width: 45px"
+                alt="brand do site Aquicurso"
+              />
+              <span class="brand ms-2">AquiCursos</span>
+            </a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item me-2">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item me-2">
+                <a class="nav-link" href="#">Nosso Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-4" id="loginLink" href="./login.html"
+                  ><img
+                    src="../assets/login.png"
+                    class="me-2"
+                    style="width: 20px"
+                    alt="login-avatar"
+                    id="iconLogin"
+                  />
+                  <span>Login</span></a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item me-2">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item me-2">
-              <a class="nav-link" href="#">Nosso Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link me-4" id="loginLink" href="./login.html"
-                ><img
-                  src="../assets/login.png"
-                  class="me-2"
-                  style="width: 20px"
-                  alt="login-avatar"
-                  id="iconLogin"
-                />
-                <span>Login</span></a
-              >
-            </li>
-          </ul>
+      </nav>
+      <div class="content row" id="hero-financas">
+        <div class="d-flex flex-column col" id="curso-text">
+          <h1 class="title-curso mb-4">Curso Online de Finanças Pessoais</h1>
+          <p class="text-paragraph mb-5">
+            O curso aborda a relação entre finanças pessoais e educação
+            financeira e qual o impacto das finanças pessoais nos negócios.
+            Apresenta técnicas, ferramentas e metodologias que contribuem com o
+            aumento de ganhos financeiros.
+          </p>
+          <a
+            class="btn btn-outline-success justify-content-end btn-inscreva"
+            id="inscreva"
+            href="./login.html"
+            >INSCREVA-SE</a
+          >
+        </div>
+        <div class="image-container col">
+          <img class="image" src="./assets/financas.jpg" alt="" />
         </div>
       </div>
-    </nav>
-    <div class="content" id="hero-content">
-      <div id="hero-image"></div>
-      <div class="hero-text" id="hero-text">
-        <h1>Cursos Online com Certificado</h1>
-        <p>
-          Na AquiCursos você encontrará diversos cursos online de todas as áreas
-          para o seu currículo se destacar no mercado de trabalho.
-        </p>
-      </div>
-    </div>
-    <div id="container" class="row">
-      <div id="sidebar" class="col-sm-3">
-        <h2 class="title mb-3">Categorias</h2>
-        <ul class="list-group">
-          <li><a class="list-group-item" href="">Administração</a></li>
-          <li><a class="list-group-item" href="">Artes</a></li>
-          <li>
-            <a class="list-group-item" href="">Comunicação e Marketing</a>
-          </li>
-          <li><a class="list-group-item" href="#">Direito</a></li>
-          <li><a class="list-group-item" href="#">Educação</a></li>
-          <li><a class="list-group-item" href="#">Estética</a></li>
-          <li><a class="list-group-item" href="#">Idiomas</a></li>
-          <li><a class="list-group-item" href="#">Informática e TI</a></li>
-          <li><a class="list-group-item" href="#">Nutrição</a></li>
-          <li><a class="list-group-item" href="#">Pedagogia</a></li>
-          <li><a class="list-group-item" href="#">Recursos Humanos</a></li>
-          <li><a class="list-group-item" href="#">Saúde</a></li>
-          <li><a class="list-group-item" href="#">Serviço Público</a></li>
-        </ul>
-      </div>
-      <div id="main" class="col-sm-9">
-        <form class="d-flex mb-2 mt-2" id="search" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        <div id="cursos" class="container">
-          <h2 class="mb-4">Mais procurados:</h2>
-          <div class="row d-flex gap-5 mb-4">
-            <div class="card col" style="width: 18rem">
-              <img
-                src="../assets/financas.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title d-inline-flex">Finanças Pessoais</h5>
-                <span class="details">- 15 horas</span>
-                <p class="autor">José Roberto S.</p>
-                <div class="card-btn mt-4 d-flex mt-4 justify-content-between">
-                  <p class="price d-inline-flex">R$54,90</p>
-                  <a href="./login.html" class="btn btn-primary"
-                    >Mais detalhes</a
-                  >
-                </div>
-              </div>
+      <div class="content d-flex row" id="info">
+        <h1 class="title-curso mb-4">O que você verá</h1>
+        <div id="container-card">
+          <div class="row">
+            <div class="card-info" id="cargaHoraria">
+              <h3>80 horas</h3>
+              <p>de vídeoaulas gravadas para assistir onde você quiser</p>
             </div>
-
-            <div class="card col" style="width: 18rem">
-              <img
-                src="../assets/education.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title d-inline-flex">Alfabetização</h5>
-                <span class="details">- 15 horas</span>
-                <p class="autor">Rebeca P. Oliveira</p>
-                <div class="card-btn d-flex mt-4 justify-content-between">
-                  <p class="price">R$29,99</p>
-                  <a href="./login.html" class="btn btn-primary"
-                    >Mais detalhes</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="card col" style="width: 18rem">
-              <img
-                src="../assets/programacao.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title d-inline-flex">
-                  Curso de JavaScript para iniciantes
-                </h5>
-                <span class="details">- 15 horas</span>
-                <p class="autor">Francisco Alves</p>
-                <div class="card-btn d-flex justify-content-between">
-                  <p class="price">R$45,99</p>
-                  <a href="./login.html" class="btn btn-primary"
-                    >Mais detalhes</a
-                  >
-                </div>
-              </div>
+            <div class="card-info" id="nivel">
+              <h3>Iniciante</h3>
+              <p>Aprenda do zero e termine o curso especializado no assunto</p>
             </div>
           </div>
-          <div class="row d-flex gap-5">
-            <div class="card col" style="width: 18rem">
-              <img
-                src="../assets/financeiro.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title d-inline-flex">Power BI do Zero</h5>
-                <span class="details">- 15 horas</span>
-                <p class="autor">Priscila Trindade</p>
-                <div class="card-btn d-flex mt-4 justify-content-between">
-                  <p class="price">R$49,99</p>
-                  <a href="./login.html" class="btn btn-primary"
-                    >Mais detalhes</a
-                  >
-                </div>
-              </div>
+          <div class="row g-5">
+            <div class="card-info" id="acesso">
+              <h3>Ilimitado</h3>
+              <p>Acesso ao curso por tempo ilimitado</p>
+              <p></p>
             </div>
-
-            <div class="card col" style="width: 18rem">
-              <img src="../assets/tech.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title d-inline-flex">Lógica de Programação</h5>
-                <span class="details">- 15 horas</span>
-                <p class="autor">Otávio Ribeiro</p>
-                <div class="card-btn d-flex mt-4 justify-content-between">
-                  <p class="price">R$69,99</p>
-                  <a href="./login.html" class="btn btn-primary"
-                    >Mais detalhes</a
-                  >
-                </div>
-              </div>
+            <div class="card-info" id="vagas">
+              <h3>50 vagas</h3>
+              <p>Inscreva-se com seu amigo.</p>
+              <p></p>
             </div>
-            <div class="card col" style="width: 18rem">
-              <img src="../assets/python.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Curso Básico de Python</h5>
-                <span class="details">- 15 horas</span>
-                <p class="autor">Euclides Siqueira</p>
-                <div class="card-btn d-flex mt-4 justify-content-between">
-                  <p class="price">R$89,99</p>
-                  <a href="./login.html" class="btn btn-primary"
-                    >Mais detalhes</a
-                  >
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div id="info-col-2" class="col-sm-3">
+          <div class="card" style="width: 18rem">
+            <h4>Valor unitário:</h4>
+            <div id="preco"><h3>R$54,90</h3></div>
+            <label for="quantidade">Selecione a quantidade de vagas:</label>
+            <input type="number" name="quantVagas" id="quantidade" value="1" />
+            <span class="financas" id="total">TOTAL: </span>
           </div>
         </div>
       </div>
