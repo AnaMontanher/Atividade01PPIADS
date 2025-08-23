@@ -5,10 +5,10 @@ class Curso {
 }
 
 const financas = new Curso("financas", 54.9);
-const educacao = new Curso("educacao", 49.9);
+const python = new Curso("python", 89.99);
 const javascript = new Curso("javascript", 80.9);
 
-const listaCursos = [financas, educacao, javascript];
+const listaCursos = [financas, python, javascript];
 
 const total = document.getElementById("total");
 const quantidade = document.getElementById("quantidade");

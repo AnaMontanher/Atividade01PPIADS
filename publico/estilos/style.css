@@ -14,6 +14,7 @@ body {
 h1,
 h2 {
   --main-color: #001845;
+  font-weight: 600;
 }
 
 .brand {
@@ -25,16 +26,21 @@ h2 {
 #navbar {
   background-color: #001845 !important;
   --bs-navbar-color: #d7f6f7 !important;
-  box-shadow: 4px 3px 3px 2px #0a0908;
+  --bs-navbar-disabled-color: var(--bs-navbar-color);
+  --bs-navbar-brand-color: var(--bs-navbar-color);
+  --bs-navbar-active-color: var(--bs-navbar-color);
+  box-shadow: 3px 3px 4px 2px #0a0908;
   color: #f2cc8f !important;
   max-width: 100%;
 }
 .nav-link {
-  color: #d7f6f7;
+  --bs-navbar-active-color: #d7f6f7;
   text-decoration: underline 0.15em #f2cc8f00;
   transition: text-decoration-color 500ms;
 }
-.nav-link:hover {
+.nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
   color: #f2cc8f;
   text-decoration-color: #f2cc8f;
 }
@@ -139,15 +145,29 @@ input {
 }
 
 /*PÁGINAS MAIS DETALHES*/
-#hero-financas {
+#hero-curso {
   gap: 20px;
   --bs-gutter-x: 0;
   padding: 4rem 4rem;
   background-image: linear-gradient(135deg, #f4f4f4, #94b9ff);
 }
-.btn-inscreva {
-  width: 40%;
-  --bs-btn-color: #0353a4;
+.button {
+  --bs-btn-color: #e36414;
+  -bs-btn-color: var(--bs-btn-color);
+  --bs-btn-border-color: var(--bs-btn-color);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--bs-btn-color);
+  --bs-btn-hover-border-color: var(--bs-btn-color);
+  --bs-btn-focus-shadow-rgb: 25, 135, 84;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--bs-btn-color);
+  --bs-btn-active-border-color: var(--bs-btn-color);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--bs-btn-color);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--bs-btn-color);
+  --bs-gradient: none;
+  font-weight: bolder;
 }
 
 .title-curso {
@@ -167,22 +187,55 @@ input {
   color: #3d405b;
 }
 #info {
+  color: #001845;
+  max-width: 100%;
   max-height: 700px;
-  padding: 4rem 4rem;
+  padding: 3rem 4rem;
 }
 #container-card {
+  display: flex;
+  gap: 2rem;
 }
 
 .card-info {
-  padding: 2.5rem 1rem;
+  padding: 2rem 1rem;
   border-radius: 1rem;
-  width: 25%;
+  min-width: 200px;
+  width: 40%;
   background-color: #f2cc8f;
+  box-shadow: 3px 3px 8px 1px #495057;
+}
+.card-info:nth-child(even) {
+  background-color: rgb(248, 235, 214);
 }
 /*VALOR DO CURSO*/
+hr {
+  display: block;
+  border-color: #495057;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+.card {
+  min-height: 0px !important;
+  min-width: 250px !important;
+}
+#card-shop {
+  padding: 1.5rem;
+  max-width: 300px;
+  max-height: fit-content;
+  border: 2px solid #888a8ca8;
+}
+
+#quantidade {
+  width: 2.85rem;
+  padding: 0 0 0 0.75rem;
+}
 
 #total {
   display: none;
+  font-weight: bolder;
+  color: #d00000;
+  font-size: 1.5rem;
 }
 
 /*MEDIAS*/
@@ -197,16 +250,28 @@ input {
   .row {
     gap: 1.5rem !important;
   }
-  #hero-financas {
+  #hero-curso {
     flex-direction: column;
   }
+  #container-card {
+    max-width: fit-content;
+    flex-direction: column;
+  }
+  .card-info {
+    margin-top: 0;
+    width: 70%;
+  }
 }
-
+@media screen and (min-width: 578px) and (max-width: 809px) {
+  .card-info:nth-child(even) {
+    margin-top: 2rem;
+  }
+}
 @media (min-width: 1200px) {
-  #hero-financas {
+  #hero-curso {
     padding: 0 0 8rem 0;
     background-color: #004aad;
-    background-position: 0% -50px;
+    background-position: 0% -30px;
     background-repeat: no-repeat;
     background-image: url(../assets/bg-details.png);
   }
